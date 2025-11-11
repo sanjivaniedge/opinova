@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Contact() {
   return (
     <section className="mx-auto max-w-6xl px-6 md:py-16" id="contact">
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 rounded-2xl h-[500px] bg-[#4FC1E4]">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 rounded-2xl md:h-[500px] bg-[#4FC1E4]">
         <div className="flex flex-col justify-center  p-8">
           <h2 className=" font-serif text-4xl font-bold md:text-5xl">Get in TOUCH</h2>
           <div className="mt-6 space-y-3 text-sm ">
@@ -46,7 +46,7 @@ export function Contact() {
           <iframe
             title="Map"
             src="https://www.google.com/maps?q=Hadapsar+Pune+India&output=embed"
-            className="h-[500px] w-full"
+            className="md:h-[500px] h-[250px] w-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
