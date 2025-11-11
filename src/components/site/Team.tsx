@@ -10,7 +10,7 @@ const team = [
 
 export function Team() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16" id="team">
+    <section className="mx-auto max-w-6xl px-6 md:py-16" id="team">
 
       <h2 className="text-center font-serif text-4xl font-bold md:text-5xl">Our TEAM</h2>
       <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted-foreground">

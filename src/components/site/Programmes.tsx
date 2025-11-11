@@ -9,7 +9,30 @@ const slides = [
     badge: "March 2024",
     description:
       "Skills and technology training for young women pursuing engineering—removing financial barriers and improving employability.",
-    image: "https://picsum.photos/id/1043/640/420",
+    description2:
+      "This year, we launched a special program - Bharat Ki Beti Initiative - to support girl students from low-income families in completing an industry-relevant employment improvement course. The course, centered around a widely-used software tool in the tech industry, was designed to provide these young women with hands-on skills that are in high demand in today’s job market.",
+    image: "/images/b1.webp",
+    imageOnLeft: true,
+  },
+  {
+    title: "Health Checks for Migrant Workers",
+    badge: "September 2024",
+    description:
+      "In partnership with Sanjivani Pharmacy College, free health screenings reached 373+ migrant workers and their families during the sugarcane harvest.",
+    description2:
+      "A healthy body is the foundation for a productive life. By supporting these families, we are not only helping them stay healthy but also ensuring that their hard-earned money is not lost due to preventable health issues. This collaboration marks a small but significant step towards improving the lives of migrant workers and their families.",
+    image: "/images/b2.webp",
+    imageOnLeft: false,
+  },
+  {
+    title: "“Be The Change” Innovation Endeavour",
+    badge: "November 2024",
+    description:
+      "Student teams built working prototypes; the winning all-women team developed Jalmitra—an affordable water-quality testing device for small farmers.",
+    description2:
+      "The initiative was designed to provide financial support for students to bring their ideas to life. However, the core philosophy behind Be The Change is not just about creating successful products—it’s about fostering a spirit of innovation and resilience.",
+    image: "/images/b3.webp",
+    imageOnLeft: true,
   },
 ];
 
@@ -22,21 +45,28 @@ export function Programmes() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-16" id="programs">
       <h2 className="text-center font-serif text-4xl font-bold md:text-5xl">Signature PROGRAMMES</h2>
-      <div className="relative mt-4 rounded-2xl border border-border bg-white p-6 shadow-sm">
-        <button aria-label="prev" onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-secondary px-3 py-2">‹</button>
-        <button aria-label="next" onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-secondary px-3 py-2">›</button>
-        <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
-          <div className="overflow-hidden rounded-xl border border-border">
-            <Image src={s.image} alt={s.title} width={640} height={420} className="w-full" />
+      <div className="relative mt-6 rounded-3xl border border-[#E6E6E6] bg-white p-6 shadow-lg">
+        {/* decorative corner ribbons */}
+
+
+        <button aria-label="prev" onClick={prev} className="absolute text-3xl -left-6 top-1/2 -translate-y-1/2 rounded-full bg-secondary px-5 py-2">‹</button>
+        <button aria-label="next" onClick={next} className="absolute text-3xl -right-6 top-1/2 -translate-y-1/2 rounded-full bg-secondary px-5 py-2">›</button>
+
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+          {/* image */}
+          <div className={`overflow-hidden rounded-[24px] border border-[#E6E6E6] ${s.imageOnLeft ? '' : 'md:order-2'}`}>
+            <Image src={s.image} alt={s.title} width={960} height={640} className="h-full w-full object-cover" />
           </div>
-          <div>
-            <span className="rounded-full bg-secondary px-3 py-1 text-xs">{s.badge}</span>
-            <h3 className="mt-3 font-serif text-2xl font-semibold">{s.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {s.description}
-            </p>
-                 <button className="bg-primary mt-10 text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4">
-              Learn More
+          {/* copy */}
+          <div className={`${s.imageOnLeft ? '' : 'md:order-1'}`}>
+            <span className="inline-block rounded-full bg-secondary px-3 py-1 text-xs font-medium">{s.badge}</span>
+            <h3 className="mt-3 font-serif text-3xl font-semibold md:text-4xl">{s.title}</h3>
+            <p className="mt-3 text-sm text-muted-foreground">{s.description}</p>
+            {s.description2 && (
+              <p className="mt-3 text-sm text-muted-foreground">{s.description2}</p>
+            )}
+            <button className="bg-primary mt-8 text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4">
+              LEARN MORE
             </button>
           </div>
         </div>

@@ -5,16 +5,16 @@ import { Button } from "@/components/ui/button";
 export function WhyExist() {
   return (
     <section id="exist">
-      <div className="mx-auto max-w-6xl px-6 py-16">
+      <div className="mx-auto max-w-6xl px-6 md:py-16 py-10">
         <div className="rounded-2xl border border-border bg-gradient-to-r from-[#FFE7D5] via-[#FFF4EB] to-[#FFD4B4] p-6 md:p-10">
-          <div className="grid grid-cols-1 items-center gap-20 md:grid-cols-2">
+          <div className="grid grid-cols-1 items-center md:gap-20 gap-6 md:grid-cols-2">
             <div>
               <div className="overflow-hidden rounded-xl border border-border">
                 <Image src="/images/why.webp" alt="Why we exist" width={640} height={480} className="w-full" />
               </div>
             </div>
             <div className="">
-              <h2 className="font-serif text-5xl font-bold mb-8">Why We EXIST</h2>
+              <h2 className="font-serif md:text-5xl text-4xl font-bold md:  mb-8">Why We EXIST</h2>
               <p className="mt-2 text-sm text-muted-foreground">
                 We believe education, skills and honest support can break the cycle of poverty. Opinova helps people move from surviving to thriving by funding practical learning, supporting small ventures, and strengthening rural livelihoods.
               </p>
@@ -47,14 +47,16 @@ export function WhyExist() {
                   </li>
                 ))}
               </ul>
+              <div className="flex justify-center md:justify-start items-center">
               <button className="bg-primary mt-10 text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4">
                 LEARN MORE
               </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-8 flex justify-center">
+      <div className="md:mt-8 mt-0 flex justify-center">
         <Image src="/deco/deco2.webp" alt="wave" width={1200} height={40} className="w-screen " />
       </div>
     </section>

@@ -5,8 +5,11 @@ export function FocusGrid() {
     <section className="mx-auto max-w-6xl px-6 py-14" id="focus">
       {/* Heading */}
       <div className="text-center">
-        <h2 className="font-serif text-4xl font-bold md:text-5xl">
-          What We <span className="tracking-wider">[ FOCUS ]</span> On
+        <h2 className="font-serif text-4xl font-bold md:text-5xl hidden md:block">
+          What We  <span className="tracking-wider">[ FOCUS ]</span> On
+        </h2>
+         <h2 className="font-serif text-4xl font-bold md:text-5xl md:hidden block">
+          What We <br/> <span className="tracking-wider">[ FOCUS ]</span> On
         </h2>
         <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted-foreground">
           We invest where the benefit reaches whole communities.
@@ -30,7 +33,7 @@ export function FocusGrid() {
 
 
         {/* 2) Rural Livelihood — wide on right (spans 2 columns) */}
-        <div className="relative h-[380px] md:col-span-2 overflow-hidden rounded-2xl border border-[#E6E6E6] shadow-sm flex items-end justify-start">
+        <div className="relative h-[380px] md:col-span-2 overflow-hidden rounded-2xl border border-[#E6E6E6] shadow-sm flex md:items-end items-center md:justify-start justify-center">
           <Image
             src="/images/focus1.webp"
             alt="Rural Livelihood"

@@ -20,7 +20,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full bg-secondary/80 px-4 py-3 backdrop-blur supports-[backdrop-filter]:bg-secondary/70 md:px-8 md:py-5">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.webp" alt="Opinova Foundation" width={1200} height={100} className="h-10 w-40 md:h-12" />
+          <Image src="/logo.webp" alt="Opinova Foundation" width={1200} height={100} className="h-12 w-40 md:h-12" />
         </Link>
 
         {/* Desktop nav */}
@@ -43,7 +43,9 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="w-80">
               <SheetHeader>
-                <SheetTitle className="font-serif">Menu</SheetTitle>
+                <Link href="/" className="flex items-center gap-3">
+                  <Image src="/logo.webp" alt="Opinova Foundation" width={1200} height={100} className="h-14 w-40 " />
+                </Link>
               </SheetHeader>
               <div className="mt-6 flex flex-col space-y-3">
                 {links.map((l) => (
@@ -53,12 +55,17 @@ export function Header() {
                     </Link>
                   </SheetClose>
                 ))}
+                <div className=" flex justify-center items-center">
+                <button className=" bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
+                  DONATE
+                </button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
 
           {/* Donate */}
-          <button className="bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
+          <button className="hidden md:block bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
             DONATE
           </button>
         </div>

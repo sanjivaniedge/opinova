@@ -50,20 +50,18 @@ const cards: ValueCard[] = [
 
 export function Values() {
   return (
-    <section id="values" className="mx-auto max-w-6xl px-6 py-16 ">
+    <section id="values" className="mx-auto max-w-6xl  md:py-16 ">
       <h2 className="text-center font-serif text-4xl font-bold md:text-5xl">Our VALUES</h2>
       <p className="mx-auto mt-3 max-w-lg text-center text-sm text-muted-foreground">
         A fair, inclusive society where everyone has equal access to opportunity, power and resources to shape their
         future.
       </p>
 
-      <div className="mt-10 flex flex-wrap justify-center gap-8 md:gap-10">
+      <div className="mt-10 flex flex-wrap justify-center gap-8 md:gap-10 max-w-6xl mx-auto">
         {cards.map((c) => (
           <div
             key={c.title}
-            className={`relative w-[320px] min-h-[320px] md:w-[360px] md:min-h-[420px] overflow-hidden rounded-2xl border border-[#E6E6E6] p-6 ${c.bg}`}
-          >
-            {/* Embossed icon circle */}
+            className={`relative w-[320px] min-h-[320px] md:w-[360px] md:min-h-[420px] overflow-hidden rounded-2xl border border-[#E6E6E6] p-6 ${c.bg}`}>
             <div className="absolute left-6 top-6 grid  place-items-center rounded-full bg-white/35 shadow-inner ">
               <Image src={c.iconSrc} alt={c.title} width={80} height={80} />
             </div>

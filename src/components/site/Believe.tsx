@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export function Believe() {
   return (
-    <section id="believe" className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+    <section id="believe" className="mx-auto max-w-6xl px-6 py-10 md:py-20">
       <div className="relative text-center">
         <h2 className="font-serif text-4xl font-bold tracking-wide md:text-5xl">What We BELIEVE</h2>
 
-        <p className="mt-6 font-warblerserif text-2xl italic md:text-[28px]">
+        <p className="mt-6 font-warblerserif text-xl italic md:text-[28px]">
           “Give a man a fish and you feed him for a day.
         </p>
-        <p className="font-warblerserif text-2xl italic md:text-[28px]">
+        <p className="font-warblerserif text-xl italic md:text-[28px]">
           Teach a man to fish and you feed him for a lifetime.”
         </p>
 
