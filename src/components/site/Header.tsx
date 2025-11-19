@@ -1,15 +1,18 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { DonateModal } from "./DonateModal";
 
 export function Header() {
+  const [donateOpen, setDonateOpen] = useState(false);
   const links = [
     { href: "#", label: "Home", bold: true },
     { href: "#programs", label: "Programs" },
-    { href: "#impact", label: "Impact" },
+    { href: "#focus", label: "Impact" },
     { href: "#team", label: "Team" },
     { href: "#gallery", label: "Gallery" },
     { href: "#contact", label: "Contact" },
@@ -56,20 +59,23 @@ export function Header() {
                   </SheetClose>
                 ))}
                 <div className=" flex justify-center items-center">
-                <button className=" bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
-                  DONATE
-                </button>
+                <SheetClose asChild>
+                  <button onClick={() => setDonateOpen(true)} className=" bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
+                    DONATE
+                  </button>
+                </SheetClose>
                 </div>
               </div>
             </SheetContent>
           </Sheet>
 
           {/* Donate */}
-          <button className="hidden md:block bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
+          <button onClick={() => setDonateOpen(true)} className="hidden md:block bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
             DONATE
           </button>
         </div>
       </div>
+      <DonateModal open={donateOpen} onClose={() => setDonateOpen(false)} />
     </header>
   );
 }

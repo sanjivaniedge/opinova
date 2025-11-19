@@ -13,16 +13,16 @@ export function Hero() {
           <h2 className="font-serif text-3xl font-semibold tracking-[0.06em] md:text-5xl">EMPOWERING COMMUNITIES.</h2>
           <h2 className="mt-2 font-serif italic text-3xl text-accent md:text-5xl">Inspiring Change.</h2>
           <p className="mx-auto mt-6 max-w-xl text-center text-sm text-muted-foreground ">
-            We partner with local changemakers to turn ideas into lasting 
-opportunity for students, farmers, entrepreneurs and neighbourhoods.
+            We partner with local changemakers to turn ideas into lasting
+            opportunity for students, farmers, entrepreneurs and neighbourhoods.
           </p>
           <div className="mt-6 flex justify-center items-center flex-wrap gap-4">
             <button className="bg-secondary text-primary font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm md:text-md md:px-12 md:py-4">
-              GET INVOLVED
+                DONATE
             </button>
-            <button className="bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4">
-              DONATE
-            </button>
+            {/* <button className="bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4">
+                GET INVOLVED
+            </button> */}
           </div>
 
         </div>
