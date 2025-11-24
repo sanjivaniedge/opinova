@@ -13,11 +13,10 @@ export function Hero() {
           <h2 className="font-serif text-3xl font-semibold tracking-[0.06em] md:text-5xl">EMPOWERING COMMUNITIES.</h2>
           <h2 className="mt-2 font-serif italic text-3xl text-accent md:text-5xl">Inspiring Change.</h2>
           <p className="mx-auto mt-6 max-w-xl text-center text-sm text-muted-foreground ">
-            We partner with local changemakers to turn ideas into lasting
-            opportunity for students, farmers, entrepreneurs and neighbourhoods.
+            Building capacity, confidence, and opportunity so every empowered life and community sparks change for others.
           </p>
           <div className="mt-6 flex justify-center items-center flex-wrap gap-4">
-              {/* <button className="bg-secondary text-primary font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm md:text-md md:px-12 md:py-4">
+            {/* <button className="bg-secondary text-primary font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm md:text-md md:px-12 md:py-4">
                   DONATE
               </button> */}
             {/* <button className="bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4">
@@ -31,7 +30,7 @@ export function Hero() {
           <div className="relative rounded-2xl  pb-[88px] overflow-hidden ">
             <Image src="/images/banner.webp" alt="Chalkboard" width={1200} height={700} className="h-auto w-full rounded-2xl" />
             {/* floating stats */}
-            <div className="absolute z-20 pb-10 md:bottom-18 bottom-14 left-1/2 flex -translate-x-1/2 translate-y-1/2 md:gap-6 gap-2 ">
+            <div className="absolute z-20 pb-10 md:bottom-18 font-bold bottom-14 left-1/2 flex -translate-x-1/2 translate-y-1/2 md:gap-6 gap-2 ">
               {[
                 { value: "370+", label: "migrant workers\nscreened", color: "text-accent" },
                 { value: "90+", label: "student prototypes\n& trainings", color: "text-[#64C58B]" },

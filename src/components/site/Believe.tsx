@@ -6,17 +6,20 @@ export function Believe() {
       <div className="relative text-center">
         <h2 className="font-serif text-4xl font-bold tracking-wide md:text-5xl">What We BELIEVE</h2>
 
-        <p className="mt-6 font-warblerserif text-xl italic md:text-[28px]">
-          “Give a man a fish and you feed him for a day.
+        <p className="mt-6 font-warblerserif text-xl italic md:text-[28px] max-w-4xl mx-auto">
+          We believe small acts can start long stories.
+Change doesn’t need grandeur, only persistence.
+Each steady act strengthens both the giver and the cause.
+Together, these ripples keep the circle glowing.
         </p>
-        <p className="font-warblerserif text-xl italic md:text-[28px]">
+        {/* <p className="font-warblerserif text-xl italic md:text-[28px]">
           Teach a man to fish and you feed him for a lifetime.”
-        </p>
+        </p> */}
 
-        <p className="mx-auto mt-6 max-w-3xl text-sm text-[#6f6f6f]">
+        {/* <p className="mx-auto mt-6 max-w-3xl text-sm text-[#6f6f6f]">
           At Opinova, we back the final mile. We believe true impact happens when support meets action. That’s why we
           empower those ready to rise with skills, seed funding, or belief.
-        </p>
+        </p> */}
 
         {/* Fish watermark on the right for larger screens */}
         <Image

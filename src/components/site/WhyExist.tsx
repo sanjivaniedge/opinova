@@ -20,25 +20,37 @@ export function WhyExist() {
             <div className="">
               <h2 className="font-serif md:text-5xl text-4xl font-bold md:  mb-8">Why We EXIST</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                We believe education, skills and honest support can break the cycle of poverty. Opinova helps people move from surviving to thriving by funding practical learning, supporting small ventures, and strengthening rural livelihoods.
+                Change hesitates at the edge of action.
+<br/><br/>
+                We step in softly — never to own, only to enable.
+<br/><br/>
+                We fill last gaps – turning intention into momentum.
+<br/><br/>
+                We create ripples – letting one spark travel through many hands.
+<br/><br/>
+                We build quiet cycles – where those touched by hope learn to pass it on.
+<br/><br/>
+                We are not the flame.
+<br/><br/>
+                We are the circle that keeps it glowing.
               </p>
-              <p className="mt-2 text-sm text-muted-foreground">
+              {/* <p className="mt-2 text-sm text-muted-foreground">
                 We work with respect, transparency and a focus on solutions that last.
-              </p>
+              </p> */}
               <ul className="mt-6 space-y-6">
                 {[
                   {
-                    title: "We bridge the last gap:",
-                    desc: "financial or intellectual support for students, entrepreneurs and farmers who are ready to rise.",
+                    title: "Opinova Foundation supports change where it quietly falters.",
+                    desc: " We step in not to lead but to steady, bridging the last gap between effort and impact. By lending timely support, we help good work sustain itself—creating ripples of progress and keeping the shared light of hope glowing.",
                   },
-                  {
-                    title: "We spark ripple effects:",
-                    desc: "one skilled young woman, one affordable prototype, one healthy family lifts entire communities.",
-                  },
-                  {
-                    title: "We build perpetual cycles:",
-                    desc: "every life we touch is encouraged to pay it forward, just like Grameen Bank’s proven model.",
-                  },
+                  // {
+                  //   title: "We spark ripple effects:",
+                  //   desc: "one skilled young woman, one affordable prototype, one healthy family lifts entire communities.",
+                  // },
+                  // {
+                  //   title: "We build perpetual cycles:",
+                  //   desc: "every life we touch is encouraged to pay it forward, just like Grameen Bank’s proven model.",
+                  // },
                 ].map((item) => (
                   <li key={item.title} className="flex items-start gap-4">
                     <span className="mt-1 inline-flex p-[2px] h-4 w-4 items-center justify-center rounded-full bg-[#E6F7FB] ring-1 ring-[#2EB5D3]/40">

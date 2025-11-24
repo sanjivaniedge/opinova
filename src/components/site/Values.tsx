@@ -13,14 +13,14 @@ const cards: ValueCard[] = [
   {
     title: "Respect",
     description:
-      "We embrace the dignity and worth of every individual, whether student, farmer, entrepreneur or migrant worker.",
+      "We believe giving and receiving are equal acts of grace — bound by dignity, not hierarchy, and guided by shared purpose.",
     bg: "bg-[#E9F7FB]",
     iconSrc: "/icons/i1.webp",
   },
   {
     title: "Integrity",
     description:
-      "We build unbreakable trust so communities know their support is used fairly and for lasting good.",
+      "We honour every effort made in good faith — success or failure alike — trusting intent over outcome.",
     bg: "bg-[#FBECD8]",
     iconSrc: "/icons/i2.webp",
   },
