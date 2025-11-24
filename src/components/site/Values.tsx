@@ -57,12 +57,12 @@ export function Values() {
         future.
       </p>
 
-      <div className="mt-10 flex  justify-center gap-8 md:gap-10 max-w-6xl mx-auto">
+      <div className="mt-10 grid grid-cols-1 md:flex  justify-center items-center ml-6 md:ml-0 gap-8 md:gap-10 max-w-6xl mx-auto">
         {cards.map((c) => (
           <div
             key={c.title}
-            className={`relative w-[320px]  md:w-[360px]  overflow-hidden rounded-2xl border border-[#E6E6E6] p-6 ${c.bg}`}>
-            <div className="absolute left-6 top-6 grid  place-items-center rounded-full bg-white/35 shadow-inner ">
+            className={`relative w-[320px]  md:w-[360px]  overflow-hidden rounded-2xl border border-[#E6E6E6]  p-6 ${c.bg}`}>
+            <div className="absolute left-6 top-6 grid   place-items-center rounded-full bg-white/35 shadow-inner ">
               <Image src={c.iconSrc} alt={c.title} width={80} height={80} />
             </div>
             <h3 className={`mt-24 font-serif text-3xl font-bold ${c.titleClass ?? ""}`}>{c.title}</h3>
