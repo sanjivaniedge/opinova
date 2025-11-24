@@ -9,18 +9,18 @@ export function Contact() {
           <h2 className=" font-serif text-4xl font-bold md:text-5xl">Get in TOUCH</h2>
           <div className="mt-6 space-y-3 text-sm ">
             <div className="mb-6">
-              <div className="text-white font-semibold">ADDRESS:</div>
-              <div className="text-white">J2 Leisure Town, Hadapsar, Pune, India</div>
+              <div className="text-white font-semibold text-2xl">ADDRESS:</div>
+              <div className="text-white text-lg">J2 Leisure Town, Hadapsar, Pune, India</div>
             </div>
             <div className="mb-6">
-              <div className="text-white font-semibold">EMAIL:</div>
-              <div className="text-white">contact@opinovafoundation.com</div>
+              <div className="text-white font-semibold text-2xl">EMAIL:</div>
+              <div className="text-white text-lg">contact@opinovafoundation.com</div>
             </div>
             <div className="mb-6">
-              <div className="text-white font-semibold">PHONE:</div>
-              <div className="text-white">+91-9405678954</div>
+              <div className="text-white font-semibold text-2xl">PHONE:</div>
+              <div className="text-white text-lg">+91-9405678954</div>
             </div>
-            <div className=" text-white font-semibold">
+            {/* <div className=" text-white font-semibold">
               <div className="mb-2">Follow us on social media</div>
               <div className="flex gap-8">
                 <Link href="https://www.facebook.com/opinovafoundation" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -39,7 +39,7 @@ export function Contact() {
                   </span>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="overflow-hidden rounded-2xl border border-border">
