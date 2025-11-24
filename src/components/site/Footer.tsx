@@ -43,8 +43,8 @@ export function Footer() {
 
             <div className="flex md:flex-wrap flex-col md:flex-row justify-center items-center gap-6">
               <span>© {new Date().getFullYear()} Opinova Foundation 2025</span>
-              <Link href="#terms" className="hover:text-white">Terms & Conditions</Link>
-              <Link href="#privacy" className="hover:text-white">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-white">Terms & Conditions</Link>
+              <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
             </div>
           </div>
         </div>

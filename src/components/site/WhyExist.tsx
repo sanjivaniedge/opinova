@@ -1,8 +1,12 @@
+"use client";
+import { useState } from "react";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { DonateModal } from "./DonateModal";
 
 export function WhyExist() {
+  const [open, setOpen] = useState(false);
   return (
     <section id="exist">
       <div className="mx-auto max-w-6xl px-6 md:py-16 py-10">
@@ -48,14 +52,22 @@ export function WhyExist() {
                 ))}
               </ul>
               <div className="flex justify-center md:justify-start items-center">
-              <button className="bg-primary mt-10 text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4">
-                LEARN MORE
-              </button>
+                <button
+                  type="button"
+                  onClick={() => setOpen(true)}
+                  className="bg-primary mt-10 text-white cursor-pointer font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4"
+                  aria-haspopup="dialog"
+                  aria-expanded={open}
+                >
+                  LEARN MORE
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* Form modal reused from Donate flow */}
+      <DonateModal open={open} onClose={() => setOpen(false)} />
       <div className="md:mt-8 mt-0 flex justify-center">
         <Image src="/deco/deco2.webp" alt="wave" width={1200} height={40} className="w-screen " />
       </div>

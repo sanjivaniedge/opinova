@@ -14,7 +14,7 @@ export function Header() {
     { href: "#programs", label: "Programs" },
     { href: "#focus", label: "Impact" },
     { href: "#team", label: "Team" },
-    { href: "#gallery", label: "Gallery" },
+    // { href: "#gallery", label: "Gallery" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -60,7 +60,7 @@ export function Header() {
                 ))}
                 <div className=" flex justify-center items-center">
                 <SheetClose asChild>
-                  <button onClick={() => setDonateOpen(true)} className=" bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
+                  <button onClick={() => setDonateOpen(true)} className=" bg-primary text-white cursor-pointer font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
                     DONATE
                   </button>
                 </SheetClose>
@@ -70,7 +70,7 @@ export function Header() {
           </Sheet>
 
           {/* Donate */}
-          <button onClick={() => setDonateOpen(true)} className="hidden md:block bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
+          <button onClick={() => setDonateOpen(true)} className="hidden cursor-pointer md:block bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-lg md:px-12 md:py-4">
             DONATE
           </button>
         </div>

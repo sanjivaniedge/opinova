@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const slides = [
@@ -51,13 +53,22 @@ export function Programmes() {
       <div className="relative mt-6 rounded-[20px] bg-white p-[50px] shadow-[0_4px_16px_7px_rgba(0,0,0,0.16)]">
         {/* white stroke per Figma */}
         <div className="pointer-events-none absolute inset-0 rounded-[20px] ring-4 ring-white" />
-        {/* decorative corner ribbons per Figma */}
-        <div className="pointer-events-none absolute -left-1 -top-1 h-20 w-20 rotate-12 rounded-lg bg-gradient-to-br from-[#ECF8F0] to-transparent" />
-        <div className="pointer-events-none absolute -bottom-1 -right-1 h-20 w-20 -rotate-12 rounded-lg bg-gradient-to-tr from-[#FBECD8] to-transparent" />
 
+        <button
+          aria-label="prev"
+          onClick={prev}
+          className="absolute cursor-pointer -left-6 top-1/2 -translate-y-1/2 rounded-full bg-secondary p-3 text-4xl flex items-center justify-center"
+        >
+          <FiChevronLeft />
+        </button>
 
-        <button aria-label="prev" onClick={prev} className="absolute text-3xl -left-6 top-1/2 -translate-y-1/2 rounded-full bg-secondary px-5 py-2">‹</button>
-        <button aria-label="next" onClick={next} className="absolute text-3xl -right-6 top-1/2 -translate-y-1/2 rounded-full bg-secondary px-5 py-2">›</button>
+        <button
+          aria-label="next"
+          onClick={next}
+          className="absolute cursor-pointer -right-6 top-1/2 -translate-y-1/2 rounded-full bg-secondary p-3 text-4xl flex items-center justify-center"
+        >
+          <FiChevronRight />
+        </button>
 
         <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
           {/* image */}

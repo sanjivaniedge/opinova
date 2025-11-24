@@ -17,9 +17,9 @@ export function Hero() {
             opportunity for students, farmers, entrepreneurs and neighbourhoods.
           </p>
           <div className="mt-6 flex justify-center items-center flex-wrap gap-4">
-            <button className="bg-secondary text-primary font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm md:text-md md:px-12 md:py-4">
-                DONATE
-            </button>
+              {/* <button className="bg-secondary text-primary font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm md:text-md md:px-12 md:py-4">
+                  DONATE
+              </button> */}
             {/* <button className="bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4">
                 GET INVOLVED
             </button> */}
@@ -28,10 +28,10 @@ export function Hero() {
         </div>
         {/* Hero image with floating stats */}
         <div className="mx-auto mt-10 max-w-6xl px-6 ">
-          <div className="relative rounded-2xl border border-border pb-[88px] overflow-hidden ">
+          <div className="relative rounded-2xl  pb-[88px] overflow-hidden ">
             <Image src="/images/banner.webp" alt="Chalkboard" width={1200} height={700} className="h-auto w-full rounded-2xl" />
             {/* floating stats */}
-            <div className="absolute z-20 md:bottom-20 bottom-14 left-1/2 flex -translate-x-1/2 translate-y-1/2 md:gap-6 gap-2 ">
+            <div className="absolute z-20 pb-10 md:bottom-18 bottom-14 left-1/2 flex -translate-x-1/2 translate-y-1/2 md:gap-6 gap-2 ">
               {[
                 { value: "370+", label: "migrant workers\nscreened", color: "text-accent" },
                 { value: "90+", label: "student prototypes\n& trainings", color: "text-[#64C58B]" },

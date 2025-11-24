@@ -1,6 +1,10 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
+import { DonateModal } from "./DonateModal";
 
 export function FocusGrid() {
+  const [donateOpen, setDonateOpen] = useState(false);
   return (
     <section className="mx-auto max-w-6xl px-6 py-14" id="focus">
       {/* Heading */}
@@ -8,8 +12,8 @@ export function FocusGrid() {
         <h2 className="font-serif text-4xl font-bold md:text-5xl hidden md:block">
           What We  <span className="tracking-wider">[ FOCUS ]</span> On
         </h2>
-         <h2 className="font-serif text-4xl font-bold md:text-5xl md:hidden block">
-          What We <br/> <span className="tracking-wider">[ FOCUS ]</span> On
+        <h2 className="font-serif text-4xl font-bold md:text-5xl md:hidden block">
+          What We <br /> <span className="tracking-wider">[ FOCUS ]</span> On
         </h2>
         <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted-foreground">
           We invest where the benefit reaches whole communities.
@@ -88,10 +92,17 @@ export function FocusGrid() {
 
       </div>
       <div className="flex justify-center mt-14">
-      <button className="bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4 ">
-        GET INVOLVED
-      </button>
-</div>
+        <button
+          type="button"
+          onClick={() => setDonateOpen(true)}
+          aria-haspopup="dialog"
+          aria-expanded={donateOpen}
+          className="bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4 "
+        >
+          GET INVOLVED
+        </button>
+      </div>
+      <DonateModal open={donateOpen} onClose={() => setDonateOpen(false)} />
     </section>
   );
 }
