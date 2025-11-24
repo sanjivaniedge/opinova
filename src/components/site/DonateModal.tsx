@@ -30,26 +30,36 @@ export function DonateModal({ open, onClose }: DonateModalProps) {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus(null);
-    // Basic client validation (required fields)
     if (!name || !email || !linkedin || !country || !phone || !city) {
       setStatus({ type: "error", msg: "Please fill all required fields." });
       return;
     }
     setLoading(true);
+    const form = new FormData();
+    form.append("name", name);
+    form.append("email", email);
+    form.append("linkedin", linkedin);
+    form.append("country", country);
+    form.append("city", city);
+    form.append("phone", phone);
+    form.append("message", message);
+    // console.log([...form.entries()]);   // uncomment to debug payload
     try {
-      const res = await fetch("/api/donate", {
+      const res = await fetch("https://formspree.io/f/xdkvkoen", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, linkedin, country, phone, city, message }),
+        body: form,
+        headers: {
+          Accept: "application/json",
+          "X-Requested-With": "xhr", // helps Formspree identify AJAX
+        },
       });
-      const data = await res.json();
       if (res.ok) {
         setStatus({ type: "ok", msg: "Thanks! We’ll reach out shortly." });
         resetForm();
       } else {
-        setStatus({ type: "error", msg: data.error || "Something went wrong." });
+        setStatus({ type: "error", msg: "Submission failed. Please try again." });
       }
-    } catch (err) {
+    } catch {
       setStatus({ type: "error", msg: "Network error. Please try again." });
     } finally {
       setLoading(false);
@@ -70,34 +80,34 @@ export function DonateModal({ open, onClose }: DonateModalProps) {
 
         <form onSubmit={submit} className="mt-4 space-y-3">
           <div>
-            <label className="block text-sm font-medium">Full name <span className="text-red-600">*</span></label>
-            <input required aria-required value={name} onChange={(e) => setName(e.target.value)} className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="Your name" />
+            <label className="block text-sm font-medium">Full name <span className="text-red-500">*</span></label>
+            <input name="name" value={name} onChange={(e) => setName(e.target.value)} required aria-required="true" className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="Your name" />
           </div>
           <div>
-            <label className="block text-sm font-medium">Email <span className="text-red-600">*</span></label>
-            <input required aria-required value={email} onChange={(e) => setEmail(e.target.value)} type="email" className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="you@example.com" />
+            <label className="block text-sm font-medium">Email <span className="text-red-500">*</span></label>
+            <input name="email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" required aria-required="true" className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="you@example.com" />
           </div>
           <div>
-            <label className="block text-sm font-medium">LinkedIn URL <span className="text-red-600">*</span></label>
-            <input required aria-required value={linkedin} onChange={(e) => setLinkedin(e.target.value)} type="url" className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="https://www.linkedin.com/in/your-profile" />
+            <label className="block text-sm font-medium">LinkedIn URL <span className="text-red-500">*</span></label>
+            <input name="linkedin" value={linkedin} onChange={(e) => setLinkedin(e.target.value)} required aria-required="true" className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="https://linkedin.com/in/you" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div>
-              <label className="block text-sm font-medium">Country <span className="text-red-600">*</span></label>
-              <input required aria-required value={country} onChange={(e) => setCountry(e.target.value)} className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="Country" />
+              <label className="block text-sm font-medium">Country <span className="text-red-500">*</span></label>
+              <input name="country" value={country} onChange={(e) => setCountry(e.target.value)} required aria-required="true" className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="India" />
             </div>
             <div>
-              <label className="block text-sm font-medium">City <span className="text-red-600">*</span></label>
-              <input required aria-required value={city} onChange={(e) => setCity(e.target.value)} className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="City" />
+              <label className="block text-sm font-medium">City <span className="text-red-500">*</span></label>
+              <input name="city" value={city} onChange={(e) => setCity(e.target.value)} required aria-required="true" className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="Lucknow" />
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium">Phone number <span className="text-red-600">*</span></label>
-            <input required aria-required value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="e.g., +91 9876543210" />
+            <label className="block text-sm font-medium">Phone number <span className="text-red-500">*</span></label>
+            <input name="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required aria-required="true" className="mt-1 w-full rounded-md border px-3 py-2 text-sm" placeholder="+91 98765 43210" />
           </div>
           <div>
             <label className="block text-sm font-medium">Message (optional)</label>
-            <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="mt-1 w-full rounded-md border px-3 py-2 text-sm" rows={3} placeholder="Any notes" />
+            <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)} className="mt-1 w-full rounded-md border px-3 py-2 text-sm" rows={3} placeholder="Any notes" />
           </div>
 
           {status && (
