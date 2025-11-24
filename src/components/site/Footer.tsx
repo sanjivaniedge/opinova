@@ -1,8 +1,35 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export function Footer() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "ok" | "error">("idle");
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus("idle");
+    const form = new FormData();
+    form.append("email", email);
+    form.append("_subject", "New newsletter subscriber");
+    try {
+      const res = await fetch("https://formspree.io/f/xdkvkoen", {
+        method: "POST",
+        body: form,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setStatus("ok");
+        setEmail("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
   return (
     <footer className="mt-16 bg-[#2B2B2B] text-white rounded-t-3xl mx-auto max-w-6xl px-6">
       <div className=" px-6 py-10 md:py-12 ">
@@ -22,16 +49,25 @@ export function Footer() {
             {/* Right: newsletter */}
             <div>
               <h3 className="text-xl font-semibold">Subscribe to our newsletter</h3>
-              <div className="mt-4 flex w-full md:max-w-xl items-center rounded-full bg-white pl-5 pr-2 shadow-sm">
+              <form onSubmit={handleSubscribe} className="mt-4 flex w-full md:max-w-xl items-center rounded-full bg-white pl-5 pr-2 shadow-sm">
                 <input
                   type="email"
-                  placeholder="Enter your email "
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
                   className="w-full flex-1 bg-transparent py-3 md:text-sm text-xs text-[#333] outline-none placeholder:text-[#9CA3AF]"
                 />
-                <button className="rounded-full bg-[#F2792A] md:px-6 px-4 py-2 text-sm font-bold text-white hover:bg-[#e36427] transition-colors">
-                  SUBSCRIBE
+                <button
+                  type="submit"
+                  disabled={status === "ok"}
+                  className="rounded-full bg-[#F2792A] md:px-6 px-4 py-2 text-sm font-bold text-white hover:bg-[#e36427] transition-colors disabled:opacity-60"
+                >
+                  {status === "ok" ? "✓ Subscribed" : "SUBSCRIBE"}
                 </button>
-              </div>
+              </form>
+              {status === "error" && <p className="mt-2 text-xs text-red-300">Something went wrong. Try again?</p>}
             </div>
           </div>
 
