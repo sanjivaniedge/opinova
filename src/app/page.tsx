@@ -22,7 +22,7 @@ export default function Home() {
       <FocusGrid />
       <Team />
       <Programmes />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

@@ -37,7 +37,7 @@ export function WhyExist() {
               {/* <p className="mt-2 text-sm text-muted-foreground">
                 We work with respect, transparency and a focus on solutions that last.
               </p> */}
-              <ul className="mt-6 space-y-6">
+              <ul className="mt-6 space-y-6 ">
                 {[
                   {
                     title: "Opinova Foundation supports change where it quietly falters.",
@@ -53,11 +53,11 @@ export function WhyExist() {
                   // },
                 ].map((item) => (
                   <li key={item.title} className="flex items-start gap-4">
-                    <span className="mt-1 inline-flex p-[2px] h-4 w-4 items-center justify-center rounded-full bg-[#E6F7FB] ring-1 ring-[#2EB5D3]/40">
+                    {/* <span className="mt-1 inline-flex p-[2px] h-4 w-4 items-center justify-center rounded-full bg-[#E6F7FB] ring-1 ring-[#2EB5D3]/40">
                       <Check className="h-4 w-4 text-[#2EB5D3]" />
-                    </span>
+                    </span> */}
                     <p className="text-sm text-muted-foreground">
-                      <span className="font-semibold text-[#3f3f3f]">{item.title} </span>
+                      <span className="font-semibold text-[#3f3f3f]">{item.title}<br/> </span>
                       {item.desc}
                     </p>
                   </li>
