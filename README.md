@@ -34,3 +34,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Form Handling & Email
+
+### Forms
+The project currently uses **Formspree** for handling form submissions (Contact/Contribute and Newsletter).
+- **Service**: Formspree
+- **Endpoint ID**: `xdkvkoen`
+- **Target URL**: `https://formspree.io/f/xdkvkoen`
+
+All submissions from the "Contribute" modal and the "Newsletter" footer form are sent to this Formspree endpoint. The destination email address where these submissions are delivered is configured within the Formspree dashboard associated with this ID.
+
+### Contact Email
+The public-facing contact email displayed on the website (in the Contact section) is:
+- **Email**: `contact@opinovafoundation.com`
+
+### Backend (Optional/Legacy)
+There is a backend route located at `src/app/api/donate/route.ts` which is set up to use `nodemailer` for sending emails. However, the current frontend implementation bypasses this and uses Formspree directly.
