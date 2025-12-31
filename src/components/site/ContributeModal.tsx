@@ -73,7 +73,7 @@ export function ContributeModal({ open, onClose }: ContributeModalProps) {
       <div className="absolute cursor-pointer inset-0 bg-black/40" onClick={onClose} />
       <div className="relative z-10 w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl">
         <div className="flex items-center justify-between">
-          <h3 className="font-serif text-2xl">contribute</h3>
+          <h3 className="font-serif text-2xl">Contribute</h3>
           <button aria-label="close" onClick={onClose} className="rounded-full px-3 py-1 text-sm text-neutral-600 hover:bg-neutral-100">✕</button>
         </div>
         <p className="mt-1 text-sm text-neutral-700">Fill out the form and we’ll email you donation instructions.</p>

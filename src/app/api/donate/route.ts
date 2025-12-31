@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    const subject = `New donation intent from ${name}`;
+    const subject = `New contribution intent from ${name}`;
     const text = [
       `Name: ${name}`,
       `Email: ${email}`,
