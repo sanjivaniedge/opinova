@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     const gmailClientId = process.env.GMAIL_CLIENT_ID;
     const gmailClientSecret = process.env.GMAIL_CLIENT_SECRET;
     const gmailRefreshToken = process.env.GMAIL_REFRESH_TOKEN;
-    const to = process.env.DONATE_TO_EMAIL || gmailUser;
+    const to = process.env.contribute_TO_EMAIL || gmailUser;
 
     let transporter: nodemailer.Transporter | null = null;
     if (gmailUser && gmailClientId && gmailClientSecret && gmailRefreshToken) {

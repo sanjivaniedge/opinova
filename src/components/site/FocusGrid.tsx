@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { DonateModal } from "./DonateModal";
+import { ContributeModal } from "./ContributeModal";
 
 export function FocusGrid() {
-  const [donateOpen, setDonateOpen] = useState(false);
+  const [contributeOpen, setcontributeOpen] = useState(false);
   return (
     <section className="mx-auto max-w-6xl px-6 py-14" id="focus">
       {/* Heading */}
@@ -97,15 +97,15 @@ export function FocusGrid() {
       <div className="flex justify-center mt-14">
         <button
           type="button"
-          onClick={() => setDonateOpen(true)}
+          onClick={() => setcontributeOpen(true)}
           aria-haspopup="dialog"
-          aria-expanded={donateOpen}
+          aria-expanded={contributeOpen}
           className="bg-primary text-white font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm hover:bg-[#e36427] transition-all md:text-md md:px-12 md:py-4 "
         >
           GET INVOLVED
         </button>
       </div>
-      <DonateModal open={donateOpen} onClose={() => setDonateOpen(false)} />
+      <ContributeModal open={contributeOpen} onClose={() => setcontributeOpen(false)} />
     </section>
   );
 }

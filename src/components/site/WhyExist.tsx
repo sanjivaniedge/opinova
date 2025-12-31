@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { DonateModal } from "./DonateModal";
+import { ContributeModal } from "./ContributeModal";
 
 export function WhyExist() {
   const [open, setOpen] = useState(false);
@@ -78,8 +78,8 @@ export function WhyExist() {
           </div>
         </div>
       </div>
-      {/* Form modal reused from Donate flow */}
-      <DonateModal open={open} onClose={() => setOpen(false)} />
+      {/* Form modal reused from contribute flow */}
+      <ContributeModal open={open} onClose={() => setOpen(false)} />
       <div className="md:mt-8 mt-0 flex justify-center">
         <Image src="/deco/deco2.webp" alt="wave" width={1200} height={40} className="w-screen " />
       </div>
