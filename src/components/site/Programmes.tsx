@@ -36,7 +36,7 @@ const slides = [
       "Student teams built working prototypes; the winning all-women team developed Jalmitra—an affordable water-quality testing device for small farmers.",
     description2:
       "The initiative was designed to provide financial support for students to bring their ideas to life. However, the core philosophy behind Be The Change is not just about creating successful products—it’s about fostering a spirit of innovation and resilience.",
-    image: "/images/why2.webp",
+    image: "/images/work.webp",
     imageOnLeft: true,
   },
 ];

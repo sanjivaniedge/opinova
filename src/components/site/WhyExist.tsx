@@ -14,7 +14,7 @@ export function WhyExist() {
           <div className="grid grid-cols-1 items-center md:gap-10 gap-6 md:grid-cols-2">
             <div>
               <div className="overflow-hidden rounded-xl border border-border">
-                <Image src="/images/why2.webp" alt="Why we exist" width={640} height={480} className="w-[740px] h-96" />
+                <Image src="/images/why2.webp" alt="Why we exist" width={640} height={480} className="w-[740px] h-[350px]" />
               </div>
             </div>
             <div className="">
