@@ -62,7 +62,7 @@ export function FocusGrid() {
         {/* 3) Community Engagement — wide on left (spans 2 columns) */}
         <div className="relative h-[380px] md:col-span-2 overflow-hidden rounded-2xl border border-[#E6E6E6] shadow-sm flex items-end justify-start">
           <Image
-            src="/images/focus22.webp"
+            src="/images/comres.webp"
             alt="Community Engagement"
             width={1200}
             height={800}

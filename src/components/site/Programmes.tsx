@@ -25,7 +25,7 @@ const slides = [
       "In partnership with Sanjivani Pharmacy College, free health screenings reached 373+ migrant workers and their families during the sugarcane harvest.",
     description2:
       "A healthy body is the foundation for a productive life. By supporting these families, we are not only helping them stay healthy but also ensuring that their hard-earned money is not lost due to preventable health issues. This collaboration marks a small but significant step towards improving the lives of migrant workers and their families.",
-    image: "/images/b2.webp",
+    image: "/images/focus2.webp",
     imageOnLeft: false,
   },
   {
