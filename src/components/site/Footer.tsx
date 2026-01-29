@@ -40,10 +40,10 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <Image src="/logo-white.webp" alt="Opinova Foundation" width={160} height={48} className="h-12 w-auto" />
               </div>
-              <p className="mt-6 max-w-sm text-sm text-[#D9D9D9]">
+              {/* <p className="mt-6 max-w-sm text-sm text-[#D9D9D9]">
                 We partner with local changemakers to turn ideas into lasting opportunity for students, farmers,
                 entrepreneurs and neighbourhoods.
-              </p>
+              </p> */}
               <p className="mt-3 max-w-sm text-xs text-[#D9D9D9]">
                 Opinova Foundation is a registered Section 8 organization. Donations are eligible for tax benefits under Section 80G of the Income Tax Act, as applicable.
               </p>
