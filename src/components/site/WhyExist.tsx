@@ -11,10 +11,10 @@ export function WhyExist() {
     <section id="exist">
       <div className="mx-auto max-w-6xl px-6 md:py-16 py-10">
         <div className="rounded-2xl border border-border bg-gradient-to-r from-[#FFE7D5] via-[#FFF4EB] to-[#FFD4B4] p-6 md:p-10">
-          <div className="grid grid-cols-1 items-center md:gap-20 gap-6 md:grid-cols-2">
+          <div className="grid grid-cols-1 items-center md:gap-10 gap-6 md:grid-cols-2">
             <div>
               <div className="overflow-hidden rounded-xl border border-border">
-                <Image src="/images/why.webp" alt="Why we exist" width={640} height={480} className="w-full" />
+                <Image src="/images/why2.webp" alt="Why we exist" width={640} height={480} className="w-[740px] h-96" />
               </div>
             </div>
             <div className="">

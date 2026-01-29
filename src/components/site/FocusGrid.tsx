@@ -40,7 +40,7 @@ export function FocusGrid() {
         {/* 2) Rural Livelihood — wide on right (spans 2 columns) */}
         <div className="relative h-[380px] md:col-span-2 overflow-hidden rounded-2xl border border-[#E6E6E6] shadow-sm flex md:items-end items-center md:justify-start justify-center">
           <Image
-            src="/images/focus1.webp"
+            src="/images/focus.webp"
             alt="Rural Livelihood"
             width={1200}
             height={800}
@@ -62,7 +62,7 @@ export function FocusGrid() {
         {/* 3) Community Engagement — wide on left (spans 2 columns) */}
         <div className="relative h-[380px] md:col-span-2 overflow-hidden rounded-2xl border border-[#E6E6E6] shadow-sm flex items-end justify-start">
           <Image
-            src="/images/focus2.webp"
+            src="/images/focus22.webp"
             alt="Community Engagement"
             width={1200}
             height={800}

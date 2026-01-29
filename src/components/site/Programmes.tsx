@@ -14,7 +14,7 @@ const slides = [
       "Skills and technology training for young women pursuing engineering—removing financial barriers and improving employability.",
     description2:
       "This year, we launched a special program - Bharat Ki Beti Initiative - to support girl students from low-income families in completing an industry-relevant employment improvement course. The course, centered around a widely-used software tool in the tech industry, was designed to provide these young women with hands-on skills that are in high demand in today’s job market.",
-    image: "/images/b1.webp",
+    image: "/images/b.webp",
     imageOnLeft: true,
   },
   {
@@ -36,7 +36,7 @@ const slides = [
       "Student teams built working prototypes; the winning all-women team developed Jalmitra—an affordable water-quality testing device for small farmers.",
     description2:
       "The initiative was designed to provide financial support for students to bring their ideas to life. However, the core philosophy behind Be The Change is not just about creating successful products—it’s about fostering a spirit of innovation and resilience.",
-    image: "/images/b3.webp",
+    image: "/images/b44.webp",
     imageOnLeft: true,
   },
 ];

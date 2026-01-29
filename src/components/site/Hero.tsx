@@ -28,7 +28,7 @@ export function Hero() {
         {/* Hero image with floating stats */}
         <div className="mx-auto mt-10 max-w-6xl px-6 ">
           <div className="relative rounded-2xl  pb-[88px] overflow-hidden ">
-            <Image src="/images/banner.webp" alt="Chalkboard" width={1200} height={700} className="h-auto w-full rounded-2xl" />
+            <Image src="/images/banner1.webp" alt="Chalkboard" width={1200} height={700} className="h-[650px] w-full rounded-2xl" />
             {/* floating stats */}
             <div className="absolute z-20 pb-10 md:bottom-18 font-bold bottom-14 left-1/2 flex -translate-x-1/2 translate-y-1/2 md:gap-6 gap-2 ">
               {[
