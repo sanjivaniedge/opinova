@@ -13,7 +13,7 @@ export function Hero() {
           <h2 className="font-serif text-3xl font-semibold tracking-[0.06em] md:text-5xl">EMPOWERING COMMUNITIES.</h2>
           <h2 className="mt-2 font-serif italic text-3xl text-accent md:text-5xl">Inspiring Change.</h2>
           <p className="mx-auto mt-6 max-w-xl text-center text-sm text-muted-foreground ">
-            Building capacity, confidence, and opportunity so every empowered life and community sparks change for others.
+            Building capacity,      confidence, and opportunity so every empowered life and community sparks change for others.
           </p>
           <div className="mt-6 flex justify-center items-center flex-wrap gap-4">
             {/* <button className="bg-secondary text-primary font-bold text-sm px-5 py-2 rounded-tr-none rounded-br-xl rounded-tl-xl shadow-sm md:text-md md:px-12 md:py-4">
