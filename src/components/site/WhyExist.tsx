@@ -14,11 +14,11 @@ export function WhyExist() {
           <div className="grid grid-cols-1 items-center md:gap-10 gap-6 md:grid-cols-2">
             <div>
               <div className="overflow-hidden rounded-xl border border-border">
-                <Image src="/images/why2.webp" alt="Why we exist" width={640} height={480} className="w-[740px] h-[350px]" />
+                <Image src="/images/why2.webp" alt="Why we exist" width={640} height={480} className="w-[740px] lg:h-[350px]" />
               </div>
             </div>
             <div className="">
-              <h2 className="font-serif md:text-5xl text-4xl font-bold md:  mb-8">Why We EXIST</h2>
+              <h2 className="font-serif md:text-5xl text-3xl font-bold md:mb-8">Why We EXIST</h2>
               <p className="mt-2 text-sm text-muted-foreground">
                 Change hesitates at the edge of action.
 <br/><br/>
