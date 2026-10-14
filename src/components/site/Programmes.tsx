@@ -39,6 +39,17 @@ const slides = [
     image: "/images/work.webp",
     imageOnLeft: true,
   },
+  {
+    title: "Sahaj Aay Initiative",
+    badge: "October, 2026",
+    badgeColor: "bg-[#D97A1E]",
+    description:
+      "A livelihood initiative for marginal farmers—building steady income through sustainable farming practices, resource access, and market linkages.",
+    description2:
+      "Small action, big impact. The Sahaj Aay Initiative supports marginal farming families by bridging gaps in training, resources, and market access—helping them turn consistent effort into reliable income and lasting rural prosperity.",
+    image: "/images/Proud Farmer’s Oyster Mushroom Harvest.png",
+    imageOnLeft: false,
+  },
 ];
 
 export function Programmes() {
